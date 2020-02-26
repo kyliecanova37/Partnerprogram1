@@ -1,0 +1,82 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0305
+header_name {.h}
+code_name {.cxx}
+Function {make_phone()} {open
+} {
+  Fl_Window {} {open
+    xywh {-32000 -32000 170 307} type Double hide
+  } {
+    Fl_Button btn_1 {
+      label 1
+      xywh {15 105 40 40}
+    }
+    Fl_Button btn_2 {
+      label 2
+      xywh {65 105 40 40}
+    }
+    Fl_Button btn_3 {
+      label 3
+      xywh {115 105 40 40}
+    }
+    Fl_Button btn_4 {
+      label 4
+      xywh {15 155 40 40}
+    }
+    Fl_Button btn_5 {
+      label 5
+      xywh {65 155 40 40}
+    }
+    Fl_Button btn_6 {
+      label 6
+      xywh {115 155 40 40}
+    }
+    Fl_Button btn_7 {
+      label 7
+      xywh {15 205 40 40}
+    }
+    Fl_Button btn_8 {
+      label 8
+      xywh {65 205 40 40}
+    }
+    Fl_Button btn_9 {
+      label 9
+      xywh {115 205 40 40}
+    }
+    Fl_Button btn_star {
+      label {*}
+      xywh {15 255 40 40}
+    }
+    Fl_Button btn_pound {
+      label {\#}
+      xywh {115 255 40 40}
+    }
+    Fl_Button btn_0 {
+      label 0
+      xywh {65 255 40 40}
+    }
+    Fl_Button btn_clear {
+      label clear
+      xywh {90 60 65 35}
+    }
+    Fl_Button btn_call {
+      label call
+      xywh {15 60 65 35}
+    }
+    Fl_Output text {selected
+      xywh {15 15 140 35}
+    }
+  }
+}
+
+Function {button_clicked(FL_Button *btn)} {open
+} {
+  code {text->value(btn->label());} {}
+}
+
+Function {main()} {open
+} {
+  code {Fl_Double_Window window = make_phone();
+window->show();} {}
+  code {fl::run();} {}
+}
